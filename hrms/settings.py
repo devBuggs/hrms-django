@@ -10,11 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -25,7 +26,21 @@ SECRET_KEY = 'django-insecure-(%_35u#^$&^4!hr_-barhye)(sbk2b24=6(+d01r7zajt6x^tn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# if DEBUG == False:
+#     CSRF_COOKIE_SECURE = True
+#     SESSION_COOKIE_SECURE = True
+
+if DEBUG == False:
+    SECURE_SSL_REDIRECT = True
+
+# 
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# session age 30 minutes
+SESSION_COOKIE_AGE = 60*60
+
+
+ALLOWED_HOSTS = ['*', ]
 
 
 # Application definition
@@ -54,7 +69,7 @@ ROOT_URLCONF = 'hrms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates', ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,6 +133,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [ STATIC_DIR, ]
+# STATIC_ROOT = STATIC_DIR
+
+
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Turned this on for production
+# MEDIA_ROOT = '/home/afrendez/public_html/media/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
