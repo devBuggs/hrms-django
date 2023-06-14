@@ -28,3 +28,19 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
     
+
+
+class Department(models.Model): 
+    name = models.CharField(max_length=50, null=False)
+    create_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="department_created_by")
+    create_date = models.DateTimeField(auto_now_add=True)
+    update_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="department_updated_by")
+    update_date = models.DateTimeField(auto_now=True)
+
+class Category(models.Model):
+    name = models.CharField(max_length=50, null=False)
+    create_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="category_created_by")
+    create_date = models.DateTimeField(auto_now_add=True)
+    update_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name="category_updated_by")
+    update_date = models.DateTimeField(auto_now=True)
+
