@@ -39,6 +39,7 @@ if DEBUG == False:
 # session age 30 minutes
 SESSION_COOKIE_AGE = 60*60
 
+AUTH_USER_MODEL = 'adminapp.CustomUser'
 
 ALLOWED_HOSTS = ['*', ]
 
