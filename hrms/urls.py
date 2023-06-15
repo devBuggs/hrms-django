@@ -31,7 +31,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('frontend/favicon.ico'))),
     path('', include('webapp.urls')),
-    path('', include('adminapp.urls')),
+    path('auth/', include('adminapp.urls')),
 
 ]
 
