@@ -1,8 +1,8 @@
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="/static/assets/img/sidebar-1.jpg">
+{% load static %}
+<div class="sidebar" data-color="purple" data-background-color="white" data-image="{% static 'assets/img/sidebar-1.jpg' %}">
       <div class="logo">
-        <a target="_blank" rel="noopener noreferrer" 
-           href="https://appseed.us/admin-dashboards/django-dashboard-material" class="simple-text logo-normal">
-          Django Material
+        <a target="_blank" rel="noopener noreferrer" href="https://appseed.us/admin-dashboards/django-dashboard-material" class="simple-text logo-normal">
+          Dashboard
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -64,9 +64,9 @@
           <li class="nav-item active">
             <a class="nav-link" 
               target="_blank" rel="noopener noreferrer"  
-              href="https://appseed.us/admin-dashboards/django-dashboard-material-pro">
-              <i class="material-icons">unarchive</i>
-              <p>PRO Version</p>
+              href="{% url 'adminapp:login' %}">
+              <i class="material-icons">login</i>
+              <p>Login</p>
             </a>
           </li>          
 
