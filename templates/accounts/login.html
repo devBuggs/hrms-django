@@ -27,12 +27,12 @@
           
           <br />
 
-          <form role="form" method="post" action="#">
+          <form role="form" method="post" action="{% url 'adminapp:login' %}">
             {% csrf_token %} 
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label class="bmd-label-floating">Username</label>
+                  <label class="bmd-label-floating">Email</label>
                   {{ form.username }}
                 </div>
               </div>
@@ -50,7 +50,7 @@
             <button type="submit" name="login" class="btn btn-primary pull-left">Login</button>
             &nbsp; &nbsp; 
             <span class="pull-right">
-              Don't have an account? <a href="{% url 'adminapp:register' %}" class="text-primary">Create</a>
+              Forget Password? <a href="{% url 'adminapp:forget-password' %}" class="text-primary">Reset Now!</a>
             </span>
             <div class="clearfix"></div>
           </form>
