@@ -1,0 +1,196 @@
+{% extends "layouts/base.html" %} {% block title %} Page Blank {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
+
+<!-- <div class="row">
+        <div class="col-md-12">
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-gray">Page Blank</h6>
+                    <h4 class="card-title">
+                        Add your content 
+                    </h4>
+                    <a href="/" class="btn btn-primary btn-round">Home</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<div class="col-md-12">
+    <div class="card card-plain">
+        <!-- <div class="card-header card-header-primary">
+            <h4 class="card-title mt-0">Manage Employees</h4>
+            <p class="card-category">Here is a subtitle for this table</p>
+        </div> -->
+        <nav class="navbar navbar-expand-lg bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="#">Manage Employees</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">
+                                <span class="material-icons">add</span>
+                                <span class="material-icons">person</span>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li> -->
+                    </ul>
+                    <form class="form-inline ml-auto">
+                        <div class="form-group no-border">
+                            <input type="text" name="search" class="form-control" placeholder="Search" />
+                        </div>
+                        <button type="submit" class="btn btn-just-icon btn-round">
+                            <i class="material-icons">search</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>City</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Dakota Rice</td>
+                            <td>Niger</td>
+                            <td>Oud-Turnhout</td>
+                            <td>$36,738</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="material-icons">
+                                        info
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="material-icons">
+                                        delete
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Minerva Hooper</td>
+                            <td>Curaçao</td>
+                            <td>Sinaai-Waas</td>
+                            <td>$23,789</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="material-icons">
+                                        info
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="material-icons">
+                                        delete
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sage Rodriguez</td>
+                            <td>Netherlands</td>
+                            <td>Baileux</td>
+                            <td>$56,142</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="material-icons">
+                                        info
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="material-icons">
+                                        delete
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Philip Chaney</td>
+                            <td>Korea, South</td>
+                            <td>Overland Park</td>
+                            <td>$38,735</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="material-icons">
+                                        info
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="material-icons">
+                                        delete
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Doris Greene</td>
+                            <td>Malawi</td>
+                            <td>Feldkirchen in Kärnten</td>
+                            <td>$63,542</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="material-icons">
+                                        info
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="material-icons">
+                                        delete
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Mason Porter</td>
+                            <td>Chile</td>
+                            <td>Gloucester</td>
+                            <td>$78,615</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="material-icons">
+                                        info
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="material-icons">
+                                        delete
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {% include 'components/pagination.html' %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
